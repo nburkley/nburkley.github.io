@@ -1,6 +1,7 @@
 # SITE CONFIGURATION
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://niallburkley.com" # the base hostname & protocol for your site
+url: https://niallburkley.com
+enforce_ssl: niallburkley.com
 
 # THEME-SPECIFIC CONFIGURATION
 theme:
@@ -14,10 +15,10 @@ theme:
   header_text: >
     <p>
       Software Developer based in Berlin, Germany, working with
-      <a href="http://www.edenspiekermann.com/">Edenspiekermann</a>
+      <a href="http://www.edenspiekermann.com/">Edenspiekermann</a>.
     </p>
 
-    <p>I can usually be found writing <code>ruby</code> for the web</p>
+    <p>I can usually be found writing <code>ruby</code> for the web.</p>
   header_text_feature_image:
   footer_text: >
    Powered by <a href="http://jekyllrb.com">Jekyll</a> with <a href="https://rohanchandra.github.io/project/type/">Type Theme</a>
@@ -57,7 +58,7 @@ theme:
   # Post navigation
   post_navigation: false
 
-permalink: /:title/
+permalink: /blog/:title/
 
 # PAGINATION
 paginate: 5

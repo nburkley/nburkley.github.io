@@ -1,0 +1,30 @@
+<meta name="author" content="Niall Burkley">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@nburkley">
+<meta name="twitter:creator" content="@nburkley">
+<meta property="og:site_name" content="{{ site.theme.title }}">
+
+{% if page.title %}
+  <meta property="og:type" content="article">
+  <meta name="twitter:title" content="{{ page.title }}">
+{% else %}
+  <meta property="og:type" content="website">
+  <meta name="twitter:title" content="{{ site.theme.title }}">
+{% endif %}
+
+ {% if page.url %}
+  <meta property="og:type" content="{{ site.url }}{{ page.url }}">
+  <meta name="twitter:url" content="{{ site.url }}{{ page.url }}">
+ {% endif %}
+
+{% if page.description %}
+  <meta name="twitter:description" content="{{ page.description }}">
+{% else %}
+  <meta name="twitter:description" content="{{ site.theme.description }}">
+{% endif %}
+
+ {% if page.tags %}
+  {% for tag in page.tags %}
+    <meta property="article:tag" content="{{ tag }}">
+  {% endfor %}
+ {% endif %}

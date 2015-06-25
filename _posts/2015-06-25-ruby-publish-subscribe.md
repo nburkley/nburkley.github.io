@@ -3,6 +3,7 @@ layout: post
 title: Decouple ActiveRecord callbacks with some Pub/Sub
 category: ruby
 tags: ruby rails refactoring gems
+description: Refactor ActiveRecord callback to use a pub/sub paradigm instead of callbacks using the wisper gem.
 comments: true
 ---
 

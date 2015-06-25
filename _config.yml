@@ -6,7 +6,7 @@ enforce_ssl: niallburkley.com
 # THEME-SPECIFIC CONFIGURATION
 theme:
   # Meta
-  title: Niall Burkley
+  title: Niall Burkley's Developer Blog
   avatar: profile-small.jpg
   gravatar: # Email MD5 hash
   description: "Web Developer Blog covering ruby and other web technologies"

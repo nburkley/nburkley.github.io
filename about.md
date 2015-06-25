@@ -4,6 +4,7 @@ title: About
 permalink: /about/
 feature-img: "img/sample_feature_img_2.png"
 hide: true
+sitemap: false
 ---
 
 Type Theme is a free and open-source theme for [Jekyll](http://jekyllrb.com/), licensed under the MIT License.

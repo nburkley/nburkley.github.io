@@ -9,7 +9,7 @@ theme:
   title: Niall Burkley
   avatar: profile-small.jpg
   gravatar: # Email MD5 hash
-  description: "A website with blog posts and pages" # used by search engines
+  description: "Web Developer Blog covering ruby and other web technologies"
 
   # Header and footer text
   header_text: >
@@ -69,3 +69,6 @@ highlighter: pygments
 sass:
   sass_dir: _sass
   style: :compressed
+
+gems:
+  - jekyll-sitemap

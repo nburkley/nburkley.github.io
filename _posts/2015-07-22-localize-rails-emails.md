@@ -2,12 +2,12 @@
 layout: post
 title: Localize Emails in Rails
 category: ruby
-tags: ruby rails localization I18n email languages devise
+tags: ruby rails localization I18n email languages devise internationalization
 description: Localizing emails in Rails
 comments: true
 ---
 
-Right out of the box, Rails makes setting up your site for different languages very easy. Here's how to setup `I18n` localization for your emails as well.
+Right out of the box, Rails makes setting up your site for different languages very easy. Here's how to setup `I18n` internationalization for your emails as well.
 
 ## Introduction
 
@@ -63,7 +63,7 @@ The rails guides has some more information here: [Setting the Locale from the Cl
 
 Let's say we've got a `UserMailer` to notify a user they've got a new follower.
 
-Here's how our email template looks without any localization support:
+Here's how our email template looks without any internationalization support:
 
 ```html
 # app/views/user_mailer/new_follower.html.erb

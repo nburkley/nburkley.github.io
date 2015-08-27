@@ -86,10 +86,10 @@ While our `Followable` module keeps our model code nice and DRY, we still want t
 Instead, we can pull the duplicated spec out into a reusable block using `shared_examples_for`:
 
 ```ruby
-# spec/support/followable.rb
+# spec/spec_helper.rb
+Dir[Rails.root.join('spec/shared_examples/**/*.rb')].each { |f| require f }
 
-require 'spec_helper'
-
+# spec/shared_examples/followable.rb
 shared_examples_for 'is_followable' do
   let(:resource) { create(described_class.name.underscore) }
 
@@ -106,10 +106,12 @@ Then we can call it in our `User` and `Project` specs and call it using `it_beha
 ```ruby
 require 'rails_helper'
 
+# spec/models/user_spec.rb
 describe User do
   it_behaves_like 'is_followable'
 end
 
+# spec/models/project_spec.rb
 describe Project do
   it_behaves_like 'is_followable'
 end

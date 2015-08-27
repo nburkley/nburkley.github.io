@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Dry up your specs using rspec's `shared_examples_for`
+title: DRY up your specs using RSpec's `shared_examples_for`
 category: ruby
-tags: ruby rails rspec tests dry
-description: Dry up your specs using rspec's `shared_examples_for`.
+tags: ruby rails rspec testing specs dry
+description: Using RSpec's `shared_examples_for` to remove duplication from your specs.
 comments: true
 ---
 
-[Rspec](http://rspec.info/) is great for writing tests in `ruby`,  providing a nice DSL for testing expected behaviour. However, as a test suite grows, you may find yourself writing a lot of boiler plate and even duplicating specs.  Rspec's `shared_examples_for` can be a good way to DRY up some of these cases. I couldn't find much documentation on using it, so wrote a short about it.
+[RSpec](http://rspec.info/) is great for writing tests in `ruby`,  providing a nice DSL for testing expected behaviour. However, as a test suite grows, you may find yourself writing a lot of boiler plate and even duplicating specs.  RSpec's `shared_examples_for` can be a good way to DRY up some of these cases. I couldn't find much documentation on using it, so wrote a short about it.
 
 ## Introduction
 
-I generally strive to use TDD/BDD when writing software, and for this rspec is my library of choice. It's got a nice methodology for writing tests in a logical manner, resulting in easy to follow and easy to read specs:
+I generally strive to use TDD/BDD when writing software, and for this RSpec is my library of choice. It's got a nice methodology for writing tests in a logical manner, resulting in easy to follow and easy to read specs:
 
 1. _describe_ what you're doing
 2. establish a _context_
@@ -120,6 +120,6 @@ The shared example has access to the `described_class`, which is the class being
 
 Our tests are much cleaner and can easily be extended if other resources become followable. The `Followable` module may contain a lot more logic we need to test and if we decide at a later date that another resource is to be followable, it just takes one line of code to add tests for that.
 
-The examples above are using rails `ActiveRecored` models, but this is by no means a rails-specific, any ruby tests using rspec can make use of `shared_examples_for`.
+The examples above are using rails `ActiveRecored` models, but this is by no means a rails-specific, any ruby tests using RSpec can make use of `shared_examples_for`.
 
 Hope this helps.

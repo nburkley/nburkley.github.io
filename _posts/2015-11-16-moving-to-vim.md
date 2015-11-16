@@ -45,7 +45,7 @@ Vim definitely takes some time to get used to. It's more of a 'learning wall' th
 
 ![Editor Learning Curves]({{ site.baseurl }}/images/vim-learning-curve.jpg)
 
-Thoughbot wrote an [interesting blog post]( https://robots.thoughtbot.com/the-vim-learning-curve-is-a-myth ) saying the vim leraning curve is a myth. I disagree with that statement, but I do agree that if you stick at it for a few days it doesn't take long to overcome the curve and become productive.
+Thoughbot wrote an [interesting blog post]( https://robots.thoughtbot.com/the-vim-learning-curve-is-a-myth ) saying the vim learning curve is a myth. I disagree with that statement, but I do agree that if you stick at it for a few days it doesn't take long to overcome the curve and become productive.
 
 ### Getting the basics down
 

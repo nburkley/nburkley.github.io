@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Transition to Vim
+title: Moving to Vim
 category: vim
 tags: vim sublimetext tools text-editors
 description: Moving from Sublime Text to Vim

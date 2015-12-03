@@ -58,7 +58,7 @@ I also started off with an empty `.vimrc` file. I think it's definitely worth yo
 Once I had the basics, I was ready to get back to work and do some Rails development in Vim. I started off with some core plugins to get going and make the transition from Sublime Text easier
 
   * [nerdtree](https://github.com/scrooloose/nerdtree) - NERD tree as a file tree explorer
-  * [CtrlP](https://github.com/kien/ctrlp.vim) - A fuzzy file finder, one of the things I liked most in Sublime Text
+  * [CtrlP](https://github.com/ctrlpvim/ctrlp.vim) - A fuzzy file finder, one of the things I liked most in Sublime Text
   * [syntastic](https://github.com/scrooloose/syntastic) - For syntax checking
   * [vim-rails](https://github.com/tpope/vim-rails]) - A plugin to make Rails development much easier in Vim
   * [tcomment](https://github.com/tomtom/tcomment_vim) - Easily comment/uncomment blocks of code

@@ -65,7 +65,7 @@ Time: 738.404 ms
 
 You might think that indexing this column with a standard `btree` index would help this search - it doesn't. As you can see below, the query is just as slow. It's doing a full table scan and ignoring the index completely. 
 
-The new index would be used if we're doing a comparison search such as `WHERE username = 'foo'`, but not if we're doing a partial match using `LIKE` or `ILIKE`
+The new index would be used if we're doing a comparison search such as `WHERE username = 'foo'`, but not if we're doing a partial match using `LIKE` or `ILIKE`:
 
 ```sql
 $> CREATE INDEX idx_users_username ON users (username);

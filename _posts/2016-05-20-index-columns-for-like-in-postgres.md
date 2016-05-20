@@ -162,6 +162,7 @@ Running the query again we can see the compound index being used we're back to l
 
 ```sql
 EXPLAIN ANALYSE SELECT COUNT(*) FROM users WHERE first_name || ' ' || last_name ILIKE '%foo%';
+
                                                                 QUERY PLAN
 ------------------------------------------------------------------------------------------------------------------------------------------
  Aggregate  (cost=10605.00..10605.01 rows=1 width=0) (actual time=0.020..0.020 rows=1 loops=1)

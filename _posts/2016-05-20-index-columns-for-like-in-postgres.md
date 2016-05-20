@@ -187,6 +187,6 @@ However, `concat_ws` cannot be used in an index as it's not immutable. See this 
 
 ### Conclusion
 
-Once again digging into the rich features of Posgtres helps to stave of adding dependencies on other search tools. The [pg_trgm](http://www.postgresql.org/docs/9.5/static/pgtrgm.html) module provides far more than just better indexing for text columns. It provides rich fuzzy searching capabilities and can handle full-text serach. This [blog post](http://blog.lostpropertyhq.com/postgres-full-text-search-is-good-enough/)gives some great ideas of what is capable with your application database.
+Once again digging into the rich features of Posgtres helps to stave of adding dependencies on other search tools. The [pg_trgm](http://www.postgresql.org/docs/9.5/static/pgtrgm.html) module provides far more than just better indexing for text columns. It provides rich fuzzy searching capabilities and can handle full-text serach. This [blog post](http://blog.lostpropertyhq.com/postgres-full-text-search-is-good-enough/) gives some great ideas of what is capable with your application database.
 
 Thanks to [this post](https://www.depesz.com/2011/02/19/waiting-for-9-1-faster-likeilike/) by [@the_depesz](https://twitter.com/the_depesz) for pointing me in the right direction.

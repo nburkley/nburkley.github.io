@@ -152,7 +152,7 @@ Time: 1027.547 ms
 ```
 Instead we need to create the index on the compound column we're using in the query.
 
-```
+```sql
 $> CREATE INDEX index_users_full_name
              ON users using gin ((first_name || ' ' || last_name) gin_trgm_ops);
 
@@ -160,7 +160,7 @@ $> CREATE INDEX index_users_full_name
 
 Running the query again we can see the compound index being used we're back to lightning fast speeds.
 
-```
+```sql
 EXPLAIN ANALYSE SELECT COUNT(*) FROM users WHERE first_name || ' ' || last_name ILIKE '%foo%';
                                                                 QUERY PLAN
 ------------------------------------------------------------------------------------------------------------------------------------------

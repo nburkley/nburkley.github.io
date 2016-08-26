@@ -61,6 +61,7 @@ $> EXPLAIN ANALYSE SELECT COUNT(*) FROM users WHERE username ILIKE '%foo%';
 
 Time: 738.404 ms
 ```
+
 ### Regular index
 
 You might think that indexing this column with a standard `btree` index would help this search - it doesn't. As you can see below, the query is just as slow. It's doing a full table scan and ignoring the index completely. 
@@ -118,8 +119,8 @@ $> EXPLAIN ANALYSE SELECT COUNT(*) FROM users WHERE username ILIKE '%foo%';
 (7 rows)
 
 Time: 2.333 ms
-
 ```
+
 ### Compound columns
 
 In the table above we have users with a `first_name` and `last_name`.

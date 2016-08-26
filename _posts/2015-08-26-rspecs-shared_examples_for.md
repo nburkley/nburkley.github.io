@@ -11,9 +11,6 @@ comments: true
 
 ## Introduction
 
-* 
-
-
 
 I generally strive to use TDD/BDD when writing software, and for this RSpec is my library of choice. It's got a nice methodology for writing tests in a logical manner, resulting in easy to follow and easy to read specs:
 

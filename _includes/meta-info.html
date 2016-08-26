@@ -3,10 +3,10 @@
 <meta http-equiv="X-Frame-Options" content="sameorigin">
 
 <meta name="twitter:card" content="summary">
-<meta name="twitter:site" content="{{ site.theme.twitter }}">
-<meta name="twitter:creator" content="{{ site.theme.twitter }}">
-<meta property="og:site_name" content="{{ site.theme.title }}">
-<meta property="og:image" content="{{ site.url }}/images/{{ site.theme.avatar }}">
+<meta name="twitter:site" content="{{ site.theme_settings.twitter }}">
+<meta name="twitter:creator" content="{{ site.theme_settings.twitter }}">
+<meta property="og:site_name" content="{{ site.theme_settings.title }}">
+<meta property="og:image" content="{{ site.url }}/images/{{ site.theme_settings.avatar }}">
 
 {% if page.title %}
   <meta property="og:type" content="article">
@@ -14,8 +14,8 @@
   <meta name="twitter:title" content="{{ page.title }}">
 {% else %}
   <meta property="og:type" content="website">
-  <meta property="og:title" content="{{ site.theme.title }}">
-  <meta name="twitter:title" content="{{ site.theme.title }}">
+  <meta property="og:title" content="{{ site.theme_settings.title }}">
+  <meta name="twitter:title" content="{{ site.theme_settings.title }}">
 {% endif %}
 
  {% if page.url %}
@@ -28,9 +28,9 @@
   <meta name="twitter:description" content="{{ page.description }}">
   <meta name="description" content="{{ page.description }}">
 {% else %}
-  <meta property="og:description" content="{{ site.theme.description }}">
-  <meta name="twitter:description" content="{{ site.theme.description }}">
-  <meta name="description" content="{{ site.theme.description }}">
+  <meta property="og:description" content="{{ site.theme_settings.description }}">
+  <meta name="twitter:description" content="{{ site.theme_settings.description }}">
+  <meta name="description" content="{{ site.theme_settings.description }}">
 {% endif %}
 
  {% if page.tags %}

@@ -157,16 +157,27 @@ end
 
 ## Sending email with Devise
 
-If you use [devise](https://github.com/plataformatec/devise) for user authentication, then you know devise has it's own emails as well. To translate these you can override the methods that send these user emails.
+If you use [devise](https://github.com/plataformatec/devise) for user authentication, then you know devise has it's own emails as well.
 
-Here's an example with the `send_confirmation_instructions` method, which sends the user's confirmation email. We override the method, set the locale to the user's locale, and then call the original method in the block using `super`.
+To translate these you can override the [`send_devise_notification`](https://github.com/plataformatec/devise/blob/master/lib/devise/models/authenticatable.rb#L187) method, which is called every time devise sends an email/notification. We override the method, set the locale to the user's locale, and then call the original method in the block using `super`.
+
 
 ```ruby
 # app/models/user.rb
 
-  def send_confirmation_instructions
-    I18n.with_locale(self.locale) { super }
-  end
+def send_devise_notification(notification, *args)
+  I18n.with_locale(self.locale) { super(notification, *args) }
+end
+```
+
+Alternatively you can set the locale for a specific email by overriding the method for that mail. Here's an example with the `send_confirmation_instructions` method, which sends the user's confirmation email.
+
+```ruby
+# app/models/user.rb
+
+def send_confirmation_instructions
+  I18n.with_locale(self.locale) { super }
+end
 ```
 
 You can find translations in many different locales for all the devise-related copy in the [Devise Wiki](https://github.com/plataformatec/devise/wiki/I18n).

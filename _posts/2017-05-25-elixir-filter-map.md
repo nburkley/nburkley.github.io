@@ -11,6 +11,14 @@ When dealing with collections, I frequently find myself filtering and mapping a 
 
 The general concept of `filter_map` is pretty straight forward, but the first time I came across it I didn't quite grok it straight away. I thought it may help others to explain in a bit more detail how to use it.
 
+## Deprecated [update 12/08/17]
+
+`Enum.filter_map/3` has been [deprecated](https://github.com/elixir-lang/elixir/blob/v1.5/CHANGELOG.md#4-deprecations) in Elixir 1.5:
+
+> Deprecate Enum.filter_map/3 in favor of Enum.filter/2 + Enum.map/2 or for-comprehensions
+
+I've added some 'Alternative Implementations' to the examples below using `Enum.filter/2` + `Enum.map/2`, or for-comprehensions.
+
 ## Definition
 
 Here's the definition [from hexdocs](https://hexdocs.pm/elixir/Enum.html#filter_map/3):
@@ -63,6 +71,21 @@ fn(filtered_value) -> filtered_value * 2 end
 
 This function just multiples each value by 2, so it transforms the filter results `[2]` to return `[4]`.
 
+## Alternative Implementations
+
+Here's how the example above could be implemented using `Enum.filter/2` + `Enum.map/2`:
+
+```elixir
+[1,2,3]
+|> Enum.filter(fn(value) -> rem(value, 2) == 0 end)
+|> Enum.map(fn(filtered_value) -> filtered_value * 2 end)
+```
+
+Or it could also be written using a `for` comprehension:
+
+```elixir
+for value <- [1, 2, 3], rem(value, 2) == 0, do: value * 2
+```
 
 ## Further example
 
@@ -94,8 +117,8 @@ defmodule FilterMapExample do
     )
   end
 
-  defp has_name?(%{full_name: full_name}), do: true
-  defp has_name?(%{username: username}), do: true
+  defp has_name?(%{full_name: _full_name}), do: true
+  defp has_name?(%{username: _username}), do: true
   defp has_name?(_), do: nil
 
   defp filterd_data(%{id: id, full_name: name}), do: {id, String.upcase(name)}
@@ -124,5 +147,26 @@ end
 ```
 ---
 
-It's a handy method for working with collections. Hopefully this helps you understand how to use `filter_map` a little better!
+## Alternative Implementations
 
+Here's how the `filter_users/1` above could be implemented using `Enum.filter/2` + `Enum.map/2`:
+
+```elixir
+def filter_users(users) do
+  users
+  |> Enum.filter(&has_name?/1)
+  |> Enum.map(&filterd_data/1)
+end
+```
+
+Or it could also be written using a `for` comprehension:
+
+```elixir
+def filter_users(users) do
+  for user <- users, has_name?(user), do: filterd_data(user)
+end
+```
+
+---
+
+It's a handy method for working with collections, but going forward you should use `Enum.filter/2` + `Enum.map/2` or for-comprehensions instead. Either way, I hope this helps you understand how to use `filter_map` a little better!

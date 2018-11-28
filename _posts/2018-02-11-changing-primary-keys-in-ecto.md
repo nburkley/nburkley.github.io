@@ -55,7 +55,7 @@ After making our changes, our books table will have the following structure:
 | Column      | Type                        | Modifiers                                           |
 |-------------+-----------------------------+-----------------------------------------------------|
 | id          | bigint                      |  not null default nextval('books_id_seq'::regclass) |
-| title       | character varying(255)      |  not nul                                            |
+| title       | character varying(255)      |  not null                                           |
 | page_count  | integer                     |                                                     |
 | isbn        | character varying(255)      |  not null                                           |
 | inserted_at | timestamp without time zone |  not null                                           |

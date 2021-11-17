@@ -1,9 +1,7 @@
 ---
 external: true
-external_url: https://dev.edenspiekermann.com/2016/09/09/rails-multitenant-site/
-title: "Creating a multi-tenant site with rails"
-tags: ruby rails multi-tenant edenspiekermann
+external_url: https://underthehood.meltwater.com/blog/2021/11/16/flexibility-comes-first/
+title: "Flexibility Comes First"
+tags:  employer flexibility  Meltwater
 ---
-
-At [Edenspiekermann](https://www.edenspiekermann.com) we recently built a multi-tenant site on Ruby on Rails using [PostgreSQL schemas](https://www.postgresql.org/docs/9.5/static/ddl-schemas.html) and the [apartment gem](https://github.com/influitive/apartment).
-I wrote about it on the Espi Dev Blog…
+It's been a rough two years for everyone which put a lot of things into perspective for me. I wrote a post about how much I value an employer that is flexible with personal life. Check it out on the [Meltwater](https://www.meltwater.com) Engineering blog…

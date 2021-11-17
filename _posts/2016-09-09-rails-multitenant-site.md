@@ -1,6 +1,6 @@
 ---
 external: true
-external_url: http://dev.edenspiekermann.com/2016/09/09/rails-multitenant-site/
+external_url: https://dev.edenspiekermann.com/2016/09/09/rails-multitenant-site/
 title: "Creating a multi-tenant site with rails"
 tags: ruby rails multi-tenant edenspiekermann
 ---

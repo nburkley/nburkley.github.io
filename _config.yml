@@ -14,11 +14,11 @@ theme_settings:
   # Header and footer text
   header_text: >
     <p>
-      Software Developer based in Berlin, Germany, working with
+      Software Developer based in Boston, USA, working with
       <a href="https://www.meltwater.com/?ucs">Meltwater</a>, formerly <a href="https://www.edenspiekermann.com/">Edenspiekermann</a>.
     </p>
 
-    <p>I can usually be found writing <code>ruby</code> and <code>elixir</code> for the web.</p>
+    <p>I can usually be found writing <code>ruby</code>, <code>elixir</code> and <code>JavaScript</code> for the web.</p>
   header_text_feature_image:
   footer_text: >
    Powered by <a href="http://jekyllrb.com">Jekyll</a> with <a href="https://github.com/rohanchandra/type-theme">Type Theme</a>
